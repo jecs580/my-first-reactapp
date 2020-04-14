@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+function Helloword(props){
+  // Los componentes por lo se coloca la primera letra en mayuscula
+  
+  return (
+    <div id="hello">
+      <h3>{props.subtitle}</h3>
+      {props.mytext}
+      </div>
+  )
+}
+// En forma de funcion de flecha
+// const App = ()=> <div>Este es mi componente por medio de una funcion de flecha: <Helloword/></div>
+
+// En forma de una clase, renderizamos un componente
+// class App extends React.Component{
+//   render(){
+//     return <div>Este es mi componente por medio de una clase: <Helloword/></div>
+//   }
+// }
+
+// De forma normal
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>Es es mi componente por medio de una funcion normal: <Helloword mytext="Hola mundo" subtitle="Subtitulo 1"/><Helloword mytext="Componente 2" subtitle="Subtitulo 2"/><Helloword mytext="Componente 3" /></div>
   );
 }
 
