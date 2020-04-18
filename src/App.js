@@ -11,12 +11,25 @@ class App extends React.Component{
   state = {
     tasks:tasks
   }
-  // sadas
+
+  addTask=(title, description)=>{
+    const newTask={
+      title:title,
+      description:description,
+      id:this.state.tasks.length  // Tomamos la longitud del array antes de ser agregado un nuevo elemento
+    }
+    console.log(newTask);
+    this.setState({
+      tasks:[...this.state.tasks, newTask]  // Agregamos un nuevo elemento, concatenando el nuevo
+      //elemento a los anteriores datos
+    })
+    
+  }
   render() {
     // Carga una interfaz que creamos en el navegador
     
     return <div>
-      <TaskForm/>
+      <TaskForm addtask={this.addTask}/>
       <Tasks tareas={this.state.tasks}/> 
     </div>
   }
