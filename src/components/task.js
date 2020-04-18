@@ -20,7 +20,8 @@ class Task extends Component{
             {task.description} -
             {this.props.task.done} -
             {task.id}
-                <input type="checkbox"/>
+                <input type="checkbox" onChange={this.props.checkDone.bind(this,task.id)}/>
+                {/* Para saber el momento en que marca o desmarca checkbox tiene un evento llamado onChange */}
                 <button style={btnDelete} onClick={this.props.deleteTask.bind(this,task.id)}>
                     X
                 </button>

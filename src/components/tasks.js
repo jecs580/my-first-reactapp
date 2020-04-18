@@ -10,6 +10,7 @@ class Tasks extends Component {
         <Task 
             task={task} 
             deleteTask={this.props.deleteTask}
+            checkDone={this.props.checkDone}
             key={task.id}/> ) 
         // Colocamos el key por que cada elemento hijo que creamos deber tener un key unico.
         // React nota este error e informa que si existe duplicados puede que omita un componente.
