@@ -1,7 +1,11 @@
 import React from 'react';
 import './App.css';
+
+// Data
 import tasks from './sample/task.json';   // Importamos los datos de sample y los guardamos en la variable tasks
-import Tasks from './components/tasks'
+// Components
+import Tasks from './components/Tasks'
+import TaskForm from './components/TaskForm'
 
 class App extends React.Component{
   state = {
@@ -12,6 +16,7 @@ class App extends React.Component{
     // Carga una interfaz que creamos en el navegador
     
     return <div>
+      <TaskForm/>
       <Tasks tareas={this.state.tasks}/> 
     </div>
   }
