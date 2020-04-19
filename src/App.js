@@ -6,6 +6,7 @@ import tasks from './sample/task.json';   // Importamos los datos de sample y lo
 // Components
 import Tasks from './components/Tasks'
 import TaskForm from './components/TaskForm'
+import Posts from './components/Posts'
 
 class App extends React.Component {
   state = {
@@ -51,6 +52,7 @@ class App extends React.Component {
     return <div>
       <TaskForm addtask={this.addTask}/>
       <Tasks tareas={this.state.tasks} deleteTask={this.deleteTask} checkDone={this.checkDone}/>
+      <Posts/>
     </div>
   }
 }
